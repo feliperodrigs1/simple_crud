@@ -1,0 +1,2 @@
+class CrudTest < ApplicationRecord
+end
