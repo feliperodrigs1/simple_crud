@@ -1,24 +1,3 @@
-# README
+At beginning, i just follow the tutorial to create a simple CRUD in Rails. After that i plan to customize the application to my way...
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://www.devmedia.com.br/como-criar-um-crud-completo-com-rails/33986
