@@ -1,14 +1,31 @@
+<html style="margin: 5px"></html>
 <p style="color: green"><%= notice %></p>
 
 <h1>Crud tests</h1>
 
-<div id="crud_tests">
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    <th class="col">Name</th>
+    <th class="col">ID</th>
+    <th class="col">Address</th>
+    <th class="col">Price</th>
+    <th class="col">Email</th>
+    <th class="col">Show</th>
+  </tr>
+  </thead>
   <% @crud_tests.each do |crud_test| %>
-    <%= render crud_test %>
-    <p>
-      <%= link_to "Show this crud test", crud_test %>
-    </p>
+    <tbody>
+    <tr>
+      <td><%=crud_test.nome%></td>
+      <td><%=crud_test.id_seq%></td>
+      <td><%=crud_test.endereco%></td>
+      <td><%=crud_test.preco%></td>
+      <td><%=crud_test.email%></td>
+      <td><%= link_to "Show info", crud_test %></td>
+    </tr>
+    </tbody>
   <% end %>
-</div>
+</table>
 
-<%= link_to "New crud test", new_crud_test_path %>
+<%= button_to "New crud", new_crud_test_path, class: "btn btn-primary", :method => :get %>
