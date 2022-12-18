@@ -3,6 +3,13 @@
 
 <h1>Crud tests</h1>
 
+<%= form_tag(search_crud_tests_path, method: :get, class: "navbar-form", style: "width: 30%") do %>
+  <div style="display: flex; margin-bottom: 5px">
+    <%= text_field_tag :nome, params[:nome], placeholder: "Nome", class: "form-control", style: "margin-right: 5px; border-radius: 0px" %>
+    <%= submit_tag "Search", class: "btn btn-primary glyphicon glyphicon-search", name: nil %>
+  </div>
+<% end %>
+
 <table class="table table-striped table-bordered">
   <thead>
   <tr>
@@ -28,4 +35,4 @@
   <% end %>
 </table>
 
-<%= button_to "New crud", new_crud_test_path, class: "btn btn-primary", :method => :get %>
+<%= button_to "New crud", new_crud_test_path, class: "btn btn-primary", method: :get %>
