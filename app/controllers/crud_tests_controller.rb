@@ -56,7 +56,7 @@ class CrudTestsController < ApplicationController
   end
 
   def search
-    @crud_tests = CrudTest.where('nome LIKE ?', "%#{params[:nome]}%")
+    @crud_tests = CrudTest.where('name LIKE ?', "%#{params[:name]}%")
 
     render action: :index
   end
