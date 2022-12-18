@@ -7,8 +7,7 @@ class CrudTestsController < ApplicationController
   end
 
   # GET /crud_tests/1 or /crud_tests/1.json
-  def show
-  end
+  def show; end
 
   # GET /crud_tests/new
   def new
@@ -16,8 +15,7 @@ class CrudTestsController < ApplicationController
   end
 
   # GET /crud_tests/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /crud_tests or /crud_tests.json
   def create
@@ -55,6 +53,12 @@ class CrudTestsController < ApplicationController
       format.html { redirect_to crud_tests_url, notice: "Crud test was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    @crud_tests = CrudTest.where('nome LIKE ?', "%#{params[:nome]}%")
+
+    render action: :index
   end
 
   private
