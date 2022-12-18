@@ -5,7 +5,7 @@
 
 <%= form_tag(search_crud_tests_path, method: :get, class: "navbar-form", style: "width: 30%") do %>
   <div style="display: flex; margin-bottom: 5px">
-    <%= text_field_tag :nome, params[:nome], placeholder: "Nome", class: "form-control", style: "margin-right: 5px; border-radius: 0px" %>
+    <%= text_field_tag :name, params[:name], placeholder: "Type a Name...", class: "form-control", style: "margin-right: 5px; border-radius: 0px" %>
     <%= submit_tag "Search", class: "btn btn-primary glyphicon glyphicon-search", name: nil %>
   </div>
 <% end %>
@@ -16,7 +16,7 @@
     <th class="col">Name</th>
     <th class="col">ID</th>
     <th class="col">Address</th>
-    <th class="col">Price</th>
+    <th class="col">Income</th>
     <th class="col">Email</th>
     <th class="col">Show</th>
   </tr>
@@ -24,10 +24,10 @@
   <% @crud_tests.each do |crud_test| %>
     <tbody>
     <tr>
-      <td><%=crud_test.nome%></td>
+      <td><%=crud_test.name%></td>
       <td><%=crud_test.id_seq%></td>
-      <td><%=crud_test.endereco%></td>
-      <td><%=crud_test.preco%></td>
+      <td><%=crud_test.address%></td>
+      <td><%=crud_test.income%></td>
       <td><%=crud_test.email%></td>
       <td><%= link_to "Show info", crud_test %></td>
     </tr>
