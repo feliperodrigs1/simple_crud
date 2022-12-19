@@ -1,59 +1,10 @@
-<style>
-  html {
-      margin: auto;
-      width: 50%;
-      padding: 10px
-  }
-
-  h1 {
-      font-size: 36px;
-  }
-
-  #title {
-      font-weight: bold;
-  }
-
-  nav {
-      text-align: center;
-  }
-
-  #btn {
-      margin: 5px;
-  }
-</style>
-
 <p style="color: green"><%= notice %></p>
 
-<h1>Record</h1>
+<%= render @crud_test %>
 
-<table class="table table-striped table-bordered">
-  <tr>
-    <td id="title">Name</td>
-    <td><%= @crud_test.name %></td>
-  </tr>
-  <tr>
-    <td id="title">ID</td>
-    <td><%= @crud_test.id_seq %></td>
-  </tr>
-  <tr>
-    <td id="title">Address</td>
-    <td><%= @crud_test.address %></td>
-  </tr>
-  <tr>
-    <td id="title">Income</td>
-    <td><%= @crud_test.income %></td>
-  </tr>
-  <tr>
-    <td id="title">Email</td>
-    <td><%= @crud_test.email %></td>
-  </tr>
-</table>
+<div>
+  <%= link_to "Edit this crud test", edit_crud_test_path(@crud_test) %> |
+  <%= link_to "Back to crud tests", crud_tests_path %>
 
-<nav>
-  <div style = "display: flex; justify-content: center">
-    <%= link_to "Edit this crud test", edit_crud_test_path(@crud_test), class: "btn btn-primary", id: "btn" %>
-    <%= link_to "Back to crud tests", crud_tests_path, class: "btn btn-primary", id: "btn" %>
-  </div>
-
-  <%= button_to "Destroy this crud test", @crud_test, method: :delete, class: "btn btn-danger" %>
-</nav>
+  <%= button_to "Destroy this crud test", @crud_test, method: :delete %>
+</div>
