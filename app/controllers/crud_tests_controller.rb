@@ -69,6 +69,6 @@ class CrudTestsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def crud_test_params
-      params.require(:crud_tests).permit(:name, :id_seq, :address, :income, :email)
+      params.require(:crud_test).permit(:name, :id_seq, :address, :income, :email)
     end
 end
